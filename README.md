@@ -14,3 +14,12 @@ and AC waveforms from the Getting Started model.
 
 Germany link: PV + droop + AC/DC coupling is the same
 problem as high solar share on German distribution grids.
+
+30.8
+
+## What I ran
+- b_test_solar_MPPT: PV power follows irradiance; V_cell held near 30 V
+- c_test_AC_droop: equal droop 0.05, generators share; f ≈ 0.98 pu at 0.4 pu power
+- a_AC_DC_System: battery follows P_batt_ref; AC gens share load; AC/DC link tracks P_AC_ref
+
+Models are from MathWorks “Modeling a Hybrid Microgrid.”
