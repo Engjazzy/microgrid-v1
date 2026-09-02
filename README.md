@@ -39,3 +39,18 @@ Less sun = less current = less power.
 V_cell stayed near 30 V because MPPT holds the panel at its MPP voltage.
 
 Figures: in folder "irradiance runs"
+
+## Droop experiments (c_test_AC_droop)
+
+P–f droop sets how two generators share active power.
+Smaller droop = stiffer machine = larger share of P.
+I changed droopP1 / droopP2 in the workspace, then reran the model.
+Q–V droops stayed 0.05, so the voltage plot stayed one line.
+
+| Case | droopP1 | droopP2 | Result |
+|---|---|---|---|
+| Equal | 0.05 | 0.05 | One slope. G1 and G2 both ~0.4 pu at ~0.98 pu frequency |
+| G2 smaller droop | 0.05 | 0.025 | Two slopes. G2 took more P |
+| G1 smaller droop | 0.0125 | 0.05 | Two slopes. G1 ~0.63 pu, G2 ~0.16 pu, f ~0.992 pu |
+
+0.05/0.0125 = 4, and 0.63/0.16 ≈ 4, so share of P follows the inverse of droop.
