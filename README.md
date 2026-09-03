@@ -59,3 +59,7 @@ Source: MathWorks “Modeling a Hybrid Microgrid” (Simscape Electrical).
 I ran Test/System models and changed workspace / block parameters.
 
 Germany / Energiewende: PV output follows irradiance, and droop is how sources share load when many inverters sit on one grid.
+
+## Python check
+MATLAB MPPT peaks plotted with Python/matplotlib.
+See python/peaks.py and figures/06_python_pac_vs_sun.png
