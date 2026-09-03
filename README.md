@@ -54,3 +54,8 @@ Q–V droops stayed 0.05, so the voltage plot stayed one line.
 | G1 smaller droop | 0.0125 | 0.05 | Two slopes. G1 ~0.63 pu, G2 ~0.16 pu, f ~0.992 pu |
 
 0.05/0.0125 = 4, and 0.63/0.16 ≈ 4, so share of P follows the inverse of droop.
+
+Source: MathWorks “Modeling a Hybrid Microgrid” (Simscape Electrical).
+I ran Test/System models and changed workspace / block parameters.
+
+Germany / Energiewende: PV output follows irradiance, and droop is how sources share load when many inverters sit on one grid.
