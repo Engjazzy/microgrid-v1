@@ -63,3 +63,7 @@ Germany / Energiewende: PV output follows irradiance, and droop is how sources s
 ## Python check
 MATLAB MPPT peaks plotted with Python/matplotlib.
 See python/peaks.py and figures/06_python_pac_vs_sun.png
+
+## Python / pandas
+peaks.csv holds the MPPT peaks.
+read_peaks.py prints the table and P_AC / irradiance (~0.31 for all three rows).
