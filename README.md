@@ -49,11 +49,12 @@ Q–V droops stayed 0.05, so the voltage plot stayed one line.
 
 | Case | droopP1 | droopP2 | Result |
 |---|---|---|---|
-| Equal | 0.05 | 0.05 | One slope. G1 and G2 both ~0.4 pu at ~0.98 pu frequency |
-| G2 smaller droop | 0.05 | 0.025 | Two slopes. G2 took more P |
-| G1 smaller droop | 0.0125 | 0.05 | Two slopes. G1 ~0.63 pu, G2 ~0.16 pu, f ~0.992 pu |
+| Equal | 0.05 | 0.05 | One slope. G1 and G2 both ~0.40 pu at ~0.98 pu frequency |
+| G2 lower droop | 0.05 | 0.025 | Two slopes. G1 ~0.27 pu, G2 ~0.53 pu, f ~0.987 pu |
+| G1 lower droop | 0.0125 | 0.05 | Two slopes. G1 ~0.63 pu, G2 ~0.16 pu, f ~0.992 pu |
 
-0.05/0.0125 = 4, and 0.63/0.16 ≈ 4, so share of P follows the inverse of droop.
+Lower droop number → that generator produces a larger share of P.
+0.05/0.025 = 2 ≈ 0.53/0.27; 0.05/0.0125 = 4 ≈ 0.63/0.16
 
 Source: MathWorks “Modeling a Hybrid Microgrid” (Simscape Electrical).
 I ran Test/System models and changed workspace / block parameters.
@@ -70,3 +71,9 @@ read_peaks.py prints the table and P_AC / irradiance (~0.31 for all three rows).
 
 ## Pandas plot
 plot_peaks.py reads peaks.csv and saves figures/07_pandas_plot.png
+
+## Droop table
+python/droop.csv stores workspace droop experiments.
+read_droop.py prints the table and Pgen1/Pgen2.
+Smaller droop → larger share/production of P.
+
