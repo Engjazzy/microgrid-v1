@@ -67,3 +67,6 @@ See python/peaks.py and figures/06_python_pac_vs_sun.png
 ## Python / pandas
 peaks.csv holds the MPPT peaks.
 read_peaks.py prints the table and P_AC / irradiance (~0.31 for all three rows).
+
+## Pandas plot
+plot_peaks.py reads peaks.csv and saves figures/07_pandas_plot.png
