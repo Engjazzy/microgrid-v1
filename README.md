@@ -77,3 +77,6 @@ python/droop.csv stores workspace droop experiments.
 read_droop.py prints the table and Pgen1/Pgen2.
 Smaller droop → larger share/production of P.
 
+# Bar chart of droop power 
+bar_plot_droop.py saves figures/08_droop_share.png. saved in python plots
+The bar chart shows a visual representation of the active power sharing for G1 and G2 in each of the 3 cases.
