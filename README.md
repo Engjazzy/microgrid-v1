@@ -1,82 +1,59 @@
-# microgrid-v1# Hybrid microgrid — first public version
 
-MathWorks project: Modeling a Hybrid Microgrid (Simscape Electrical).
-I already worked through most of the live script sections
-(Essentials → Test → System). This repo is the clean public copy.
+# microgrid-v1
 
-What I will likely add next session(probably more) (screenshots + short notes):
-- PV / MPPT: 2. Test / b_test_solar_MPPT.slx
-- AC droop: 2. Test / c_test_AC_droop.slx
-- Hybrid AC/DC system: 3. System / a_AC_DC_System.slx
+Public write-up of MathWorks “Modeling a Hybrid Microgrid” (Simscape Electrical).
+I ran the Test / System models, changed irradiance and droop parameters, and
+plotted the measured results with Python.
 
-First run already produced PV power curves vs irradiance
-and AC waveforms from the Getting Started model.
+Germany / Energiewende: PV power follows sun, and droop is how sources share
+load when many inverters sit on one grid.
 
-Germany link: PV + droop + AC/DC coupling is the same
-problem as high solar share on German distribution grids.
+## MATLAB experiments
 
+- b_test_solar_MPPT: PV power follows irradiance; V_cell stayed near 30 V (MPPT).
+- c_test_AC_droop: generators share P; lower droop → that machine produces more P.
+- a_AC_DC_System: battery follows P_batt_ref; AC gens share load.
 
-## What I ran
-- b_test_solar_MPPT: PV power follows irradiance; V_cell held near 30 V
-- c_test_AC_droop: equal droop 0.05, generators share; f ≈ 0.98 pu at 0.4 pu power
-- a_AC_DC_System: battery follows P_batt_ref; AC gens share load; AC/DC link tracks P_AC_ref
+### Irradiance (b_test_solar_MPPT)
 
-Models are from MathWorks “Modeling a Hybrid Microgrid.”
-
-
-## Irradiance experiments (b_test_solar_MPPT)
-
-The irradiance block is a 24-step profile times a scale factor.
-Default: [0 0 1 1 ... 6 6 ... 1 1]*200  → peak sun 1200 W/m².
+Default profile × scale. Default *200 → peak sun 1200 W/m².
 
 | Scale | Peak sun | Peak P_AC | V_cell |
 |---|---|---|---|
-| *200 (default) | 1200 W/m² | ~380 W | ~30 V |
-| *150 | 900 W/m² | ~281.4W | ~30 V |
+| *200 | 1200 W/m² | ~380 W | ~30 V |
+| *150 | 900 W/m² | ~281.4 W | ~30 V |
 | *100 | 600 W/m² | ~182.2 W | ~30 V |
 
-Less sun = less current = less power.
-V_cell stayed near 30 V because MPPT holds the panel at its MPP voltage.
+### Droop (c_test_AC_droop)
 
-Figures: in folder "irradiance runs"
-
-## Droop experiments (c_test_AC_droop)
-
-P–f droop sets how two generators share active power.
-Smaller droop = stiffer machine = larger share of P.
-I changed droopP1 / droopP2 in the workspace, then reran the model.
-Q–V droops stayed 0.05, so the voltage plot stayed one line.
+Workspace `droopP1` / `droopP2`. Q–V droops stayed 0.05.
 
 | Case | droopP1 | droopP2 | Result |
 |---|---|---|---|
-| Equal | 0.05 | 0.05 | One slope. G1 and G2 both ~0.40 pu at ~0.98 pu frequency |
-| G2 lower droop | 0.05 | 0.025 | Two slopes. G1 ~0.27 pu, G2 ~0.53 pu, f ~0.987 pu |
-| G1 lower droop | 0.0125 | 0.05 | Two slopes. G1 ~0.63 pu, G2 ~0.16 pu, f ~0.992 pu |
+| Equal | 0.05 | 0.05 | One slope. G1 and G2 both ~0.40 pu at ~0.98 pu |
+| G2 lower droop | 0.05 | 0.025 | G1 ~0.27 pu, G2 ~0.53 pu, f ~0.987 pu |
+| G1 lower droop | 0.0125 | 0.05 | G1 ~0.63 pu, G2 ~0.16 pu, f ~0.992 pu |
 
-Lower droop number → that generator produces a larger share of P.
-0.05/0.025 = 2 ≈ 0.53/0.27; 0.05/0.0125 = 4 ≈ 0.63/0.16
+0.05/0.025 = 2 ≈ 0.53/0.27; 0.05/0.0125 = 4 ≈ 0.63/0.16.
 
-Source: MathWorks “Modeling a Hybrid Microgrid” (Simscape Electrical).
-I ran Test/System models and changed workspace / block parameters.
+## Python
 
-Germany / Energiewende: PV output follows irradiance, and droop is how sources share load when many inverters sit on one grid.
+Numbers live in CSV files. Scripts read those files and plot.
 
-## Python check
-MATLAB MPPT peaks plotted with Python/matplotlib.
-See python/peaks.py and figures/06_python_pac_vs_sun.png
+```bash
+cd microgrid-v1
+python3 -m pip install -r requirements.txt
+python3 python/plot_peaks.py
+python3 python/bar_plot_droop.py
 
-## Python / pandas
-peaks.csv holds the MPPT peaks.
-read_peaks.py prints the table and P_AC / irradiance (~0.31 for all three rows).
+| File | Role |
+|---|---|
+| python/peaks.csv | MPPT peaks |
+| python/peaks.py | plot from lists → figures/06_python_pac_vs_sun.png |
+| python/read_peaks.py | print table and P_AC / sun (~0.31) |
+| python/plot_peaks.py | plot from CSV → figures/07_pandas_plot.png |
+| python/droop.csv | droop cases |
+| python/read_droop.py | print table and Pgen1/Pgen2 |
+| python/bar_plot_droop.py | bar chart → figures/08_droop_share.png |
 
-## Pandas plot
-plot_peaks.py reads peaks.csv and saves figures/07_pandas_plot.png
-
-## Droop table
-python/droop.csv stores workspace droop experiments.
-read_droop.py prints the table and Pgen1/Pgen2.
-Smaller droop → larger share/production of P.
-
-# Bar chart of droop power 
-bar_plot_droop.py saves figures/08_droop_share.png. saved in python plots
-The bar chart shows a visual representation of the active power sharing for G1 and G2 in each of the 3 cases.
+P_AC scales with irradiance. Lower droop → taller bar for that generator.
