@@ -63,3 +63,10 @@ python3 python/bar_plot_droop.py
 ![Droop share](figures/Python%20plots/08_droop_share.png)
 
 ![MPPT POWER VS IRRADIANCE](figures/Python%20plots/06_python_pac_vs_sun.png)
+
+
+## v2 — SMARD week (31 Aug–6 Sep 2026)
+
+German actual generation and consumption from SMARD / Bundesnetzagentur.
+Files in data/. python/peek_data.py loads them with sep=";" and thousands=",".
+Next: plot Photovoltaics vs time.
