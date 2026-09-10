@@ -56,3 +56,8 @@ python3 python/bar_plot_droop.py
 | python/droop.csv | droop cases |
 | python/read_droop.py | print table and Pgen1/Pgen2 |
 | python/bar_plot_droop.py | bar chart → figures/08_droop_share.png |
+
+
+![MPPT peaks](figures/Python%20plots/07_pandas_plot.png)
+
+![Droop share](figures/Python%20plots/08_droop_share.png)
