@@ -45,6 +45,7 @@ cd microgrid-v1
 python3 -m pip install -r requirements.txt
 python3 python/plot_peaks.py
 python3 python/bar_plot_droop.py
+```
 
 | File | Role |
 |---|---|
@@ -55,5 +56,3 @@ python3 python/bar_plot_droop.py
 | python/droop.csv | droop cases |
 | python/read_droop.py | print table and Pgen1/Pgen2 |
 | python/bar_plot_droop.py | bar chart → figures/08_droop_share.png |
-
-P_AC scales with irradiance. Lower droop → taller bar for that generator.
