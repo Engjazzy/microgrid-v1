@@ -61,3 +61,5 @@ python3 python/bar_plot_droop.py
 ![MPPT peaks](figures/Python%20plots/07_pandas_plot.png)
 
 ![Droop share](figures/Python%20plots/08_droop_share.png)
+
+![MPPT POWER VS IRRADIANCE](figures/Python%20plots/06_python_pac_vs_sun.png)
