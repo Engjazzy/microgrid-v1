@@ -70,3 +70,6 @@ python3 python/bar_plot_droop.py
 German actual generation and consumption from SMARD / Bundesnetzagentur.
 Files in data/. python/peek_data.py loads them with sep=";" and thousands=",".
 Next: plot Photovoltaics vs time.
+
+python/plot_smard_pv.py → figures/09_smard_pv.png
+Source: SMARD / Bundesnetzagentur, actual generation.
