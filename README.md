@@ -73,3 +73,8 @@ Next: plot Photovoltaics vs time.
 
 python/plot_smard_pv.py → figures/09_smard_pv.png
 Source: SMARD / Bundesnetzagentur, actual generation.
+
+plot_smard_pv.py → figures/09_smard_pv.png (peak PV ~47692 MWh).
+plot_smard_compare.py → figures/10_pv_vs_residual.png
+Residual load (SMARD) = consumption − wind − PV.
+Negative hours: wind+PV exceeded load.
