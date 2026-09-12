@@ -78,3 +78,6 @@ plot_smard_pv.py → figures/09_smard_pv.png (peak PV ~47692 MWh).
 plot_smard_compare.py → figures/10_pv_vs_residual.png
 Residual load (SMARD) = consumption − wind − PV.
 Negative hours: wind+PV exceeded load.
+
+![SMARD GERMAN PV ACTUAL GENERATION](figures/Python%20plots/09_smard_pv.png)
+![ACTUAL GENERTAION VS RESIDUAL LOAD](figures/Python%20plots/10_pv_vs_residual.png)
