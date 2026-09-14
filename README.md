@@ -81,3 +81,8 @@ Negative hours: wind+PV exceeded load.
 
 ![SMARD GERMAN PV ACTUAL GENERATION](figures/Python%20plots/09_smard_pv.png)
 ![ACTUAL GENERTAION VS RESIDUAL LOAD](figures/Python%20plots/10_pv_vs_residual.png)
+
+6 Sep: highest PV hour (~47692 MWh) and deepest surplus (residual_min ~-8399 MWh).
+Weekday grid_max > weekend (typical).
+30 Aug row is only 23:00 (file start); PV is 0 because it is night, not a full day.
+ daily_smard.py printed the results  of the highest PV generation hour, highest residual load hour, and highest load grid cosumption hour into data/daily_smard.csv
