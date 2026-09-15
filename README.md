@@ -86,3 +86,6 @@ Negative hours: wind+PV exceeded load.
 Weekday grid_max > weekend (typical).
 30 Aug row is only 23:00 (file start); PV is 0 because it is night, not a full day.
  daily_smard.py printed the results  of the highest PV generation hour, highest residual load hour, and highest load grid cosumption hour into data/daily_smard.csv
+
+ Bar chart plot of the max pv of the SmARD for the one week.
+ plot_daily_smard.py printed the results  of the highest PV generation for each day into figures/Python plots/11_daily_pv_max.png
