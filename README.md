@@ -65,27 +65,34 @@ python3 python/bar_plot_droop.py
 ![MPPT POWER VS IRRADIANCE](figures/Python%20plots/06_python_pac_vs_sun.png)
 
 
+
+
 ## v2 — SMARD week (31 Aug–6 Sep 2026)
 
 German actual generation and consumption from SMARD / Bundesnetzagentur.
-Files in data/. python/peek_data.py loads them with sep=";" and thousands=",".
-Next: plot Photovoltaics vs time.
+`peek_data.py` loads the CSVs with `sep=";"` and `thousands=","`.
 
-python/plot_smard_pv.py → figures/09_smard_pv.png
-Source: SMARD / Bundesnetzagentur, actual generation.
+Residual load (SMARD) = grid consumption − wind − PV.
+Negative residual: wind+PV exceeded load that hour.
 
-plot_smard_pv.py → figures/09_smard_pv.png (peak PV ~47692 MWh).
-plot_smard_compare.py → figures/10_pv_vs_residual.png
-Residual load (SMARD) = consumption − wind − PV.
-Negative hours: wind+PV exceeded load.
+| File | Role |
+|---|---|
+| data/de_Actual_generation.csv | Hourly generation by technology |
+| data/de_Actual_consumption.csv | Grid load, pumps, residual load |
+| python/peek_data.py | Print columns and first rows |
+| python/plot_smard_pv.py | figures/Python plots/09_smard_pv.png |
+| python/plot_smard_compare.py | figures/Python plots/10_pv_vs_residual.png |
+| python/daily_smard.py | data/daily_smard.csv |
+| python/plot_daily_smard.py | figures/Python plots/11_daily_pv_max.png |
 
-![SMARD GERMAN PV ACTUAL GENERATION](figures/Python%20plots/09_smard_pv.png)
-![ACTUAL GENERTAION VS RESIDUAL LOAD](figures/Python%20plots/10_pv_vs_residual.png)
+Peak hourly PV in the week ~47692 MWh.
+6 Sep: highest PV hour and deepest surplus (residual_min ~-8399 MWh).
+Weekday grid_max > weekend.
+30 Aug in the daily table is only 23:00 (file start); PV is 0 because it is night.
 
-6 Sep: highest PV hour (~47692 MWh) and deepest surplus (residual_min ~-8399 MWh).
-Weekday grid_max > weekend (typical).
-30 Aug row is only 23:00 (file start); PV is 0 because it is night, not a full day.
- daily_smard.py printed the results  of the highest PV generation hour, highest residual load hour, and highest load grid cosumption hour into data/daily_smard.csv
+Same lesson as the MATLAB MPPT test: more sun → more PV. Here the scale is national.
 
- Bar chart plot of the max pv of the SmARD for the one week.
- plot_daily_smard.py printed the results  of the highest PV generation for each day into figures/Python plots/11_daily_pv_max.png
+![SMARD PV](figures/Python%20plots/09_smard_pv.png)
+![PV vs residual load](figures/Python%20plots/10_pv_vs_residual.png)
+![Daily peak PV](figures/Python%20plots/11_daily_pv_max.png)
+
