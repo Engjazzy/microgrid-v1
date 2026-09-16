@@ -96,3 +96,7 @@ Same lesson as the MATLAB MPPT test: more sun → more PV. Here the scale is nat
 ![PV vs residual load](figures/Python%20plots/10_pv_vs_residual.png)
 ![Daily peak PV](figures/Python%20plots/11_daily_pv_max.png)
 
+## Residual check
+check_residual.py: residual_calc = grid load − PV − wind onshore − wind offshore.
+mean diff ≈ 0.00047619047614436534 MWh
+surplus hours: 37 of 168.
