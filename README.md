@@ -100,3 +100,7 @@ Same lesson as the MATLAB MPPT test: more sun → more PV. Here the scale is nat
 check_residual.py: residual_calc = grid load − PV − wind onshore − wind offshore.
 mean diff ≈ 0.00047619047614436534 MWh
 surplus hours: 37 of 168.
+
+plot_residual_check.py → figures/Python plots/12_residual_check.png
+SMARD residual and calculated residual overlap (grid − PV − wind).
+![Curve of SMARD residual load vs calculated residual load](figures/Python%20plots/12_residual_check.png)

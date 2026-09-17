@@ -1,13 +1,16 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 gen = pd.read_csv("data/de_Actual_generation.csv",
 sep =";",
-thousands =",",
+thousands = ",",
 )
+
 load = pd.read_csv("data/de_Actual_consumption.csv",
 sep =";",
 thousands =",",
 )
+
 gen["Start date"] = pd.to_datetime(gen["Start date"])
 load["Start date"] = pd.to_datetime(load["Start date"])
 
@@ -22,14 +25,16 @@ res = "Residual load [MWh] Calculated resolutions"
 df["residual_calc"] = df[grid]- df[pv]-df[w_on] - df[w_off]
 df["diff"] = df[res]- df["residual_calc"]
 
-df.to_csv("data/merge_file.csv")
-print(df[["Start date", res, "residual_calc", "diff"]].head(8))
-print("mean diff", df["diff"].mean())
-print("surplus hours (SMARD residual < 0)", (df[res] < 0).sum())
 
-n = len(df)
-surplus = (df[res] < 0).sum()
-print("hours in week", n)
-print("surplus hours", surplus)
-print("surplus share", surplus / n)
 
+plt.plot(df["Start date"], df[res], label="SMARD residual")
+plt.plot(df["Start date"], df["residual_calc"], label="calculated")
+plt.ylabel("Residual load(MWh)")
+plt.title("SMARD residual vs calculated")
+plt.xlabel("Time")
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.grid(True, axis="y")
+plt.savefig("figures/Python plots/12_residual_check.png.")
+print("saved12_residual_check.png")
