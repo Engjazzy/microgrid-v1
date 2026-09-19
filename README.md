@@ -104,3 +104,6 @@ surplus hours: 37 of 168.
 plot_residual_check.py → figures/Python plots/12_residual_check.png
 SMARD residual and calculated residual overlap (grid − PV − wind).
 ![Curve of SMARD residual load vs calculated residual load](figures/Python%20plots/12_residual_check.png)
+
+data/surplus_hours.csv — hours where residual < 0 (wind+PV covered load).
+37 of 168 hours this week.
