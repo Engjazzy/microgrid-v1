@@ -113,3 +113,7 @@ PV vs total grid load (not residual). On 6 Sep peak PV ≈ grid load; other days
 Weekend grid load is lower than weekdays.
 
 ![PV vs grid load](figures/Python%20plots/13_pv_vs_grid.png)
+
+June 2026 week CSVs in data/ (not plotted yet).
+Confirmed Photovoltaics and grid load exist using peek_June_data.py
+They followed the same seperatar and thousands format
