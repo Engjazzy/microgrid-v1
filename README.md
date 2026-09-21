@@ -107,3 +107,9 @@ SMARD residual and calculated residual overlap (grid − PV − wind).
 
 data/surplus_hours.csv — hours where residual < 0 (wind+PV covered load).
 37 of 168 hours this week.
+
+plot_pv_grid.py → figures/Python plots/13_pv_vs_grid.png
+PV vs total grid load (not residual). On 6 Sep peak PV ≈ grid load; other days PV stays below demand.
+Weekend grid load is lower than weekdays.
+
+![PV vs grid load](figures/Python%20plots/13_pv_vs_grid.png)
