@@ -129,3 +129,8 @@ June peak hourly PV ≈ 46102.94 MWh
 |---|---|
 | 31 Aug–6 Sep 2026 | 47692 |
 | 1–7 Jun 2026 | 46102.94 |
+
+
+## Dummy battery rule (v3)
+If residual < 0: charge. If residual > 30000 MWh: discharge. Else hold.
+See data/battery_rule.csv. Not a real battery — a policy on SMARD residual.
