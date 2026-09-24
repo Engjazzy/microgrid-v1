@@ -123,3 +123,9 @@ File: data/Actual_generation_June_hour.csv (1–7 Jun, SMARD generation).
 plot → figures/Python plots/14_smard_pv_june.png
 June peak hourly PV ≈ 46102.94 MWh
 31 Aug–6 Sep peak ≈ 47692 MWh
+![June PV](figures/Python%20plots/14_smard_pv_june.png)
+
+| Week | Peak hourly PV (MWh) |
+|---|---|
+| 31 Aug–6 Sep 2026 | 47692 |
+| 1–7 Jun 2026 | 46102.94 |
