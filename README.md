@@ -134,3 +134,11 @@ June peak hourly PV ≈ 46102.94 MWh
 ## Dummy battery rule (v3)
 If residual < 0: charge. If residual > 30000 MWh: discharge. Else hold.
 See data/battery_rule.csv. Not a real battery — a policy on SMARD residual.
+
+## Dummy battery (v3)
+Rule: residual < 0 charge; residual > 30000 discharge; else hold.
+Toy battery 10000 MWh, step 2000 MWh/h, start 50%.
+battery_rule.py → data/battery_rule.csv
+battery_soc.py → data/battery_soc.csv and figures/Python plots/15_battery_soc.png
+
+![Dummy SOC](figures/Python%20plots/15_battery_soc.png)
