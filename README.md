@@ -142,3 +142,16 @@ battery_rule.py → data/battery_rule.csv
 battery_soc.py → data/battery_soc.csv and figures/Python plots/15_battery_soc.png
 
 ![Dummy SOC](figures/Python%20plots/15_battery_soc.png)
+
+## Dummy battery (v3)
+Rule: residual < 0 charge; residual > 30000 MWh discharge; else hold.
+Toy battery 10000 MWh, step 2000 MWh/h, start 50%.
+SOC hits 0 and 10000 because the tank is tiny vs national residual.
+
+Hours this week: hold 101, charge 37, discharge 30.
+battery_rule.py → data/battery_rule.csv
+battery_soc.py → data/battery_soc.csv, figures/Python plots/15_battery_soc.png
+plot_actions.py → figures/Python plots/16_action_counts.png
+
+![Dummy SOC](figures/Python%20plots/15_battery_soc.png)
+![Action counts](figures/Python%20plots/16_action_counts.png)
