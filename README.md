@@ -1,3 +1,11 @@
+## What this repo shows
+1. MATLAB hybrid microgrid: PV follows irradiance; lower droop → larger power share.
+2. SMARD Germany: one late-August week + one June week. Residual = grid load − wind − PV. Formula checked (figure 12).
+3. Dummy battery rule on the August residual: charge if residual < 0, discharge if residual > 30000 MWh, else hold. Toy 10000 MWh. SOC pegs at 0 and at cap.
+
+Not an optimiser. Not a forecast.
+
+
 
 # microgrid-v1
 
