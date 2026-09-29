@@ -163,3 +163,9 @@ plot_actions.py → figures/Python plots/16_action_counts.png
 
 ![Dummy SOC](figures/Python%20plots/15_battery_soc.png)
 ![Action counts](figures/Python%20plots/16_action_counts.png)
+
+## Persistence baseline (analyst toolkit)
+Next-hour PV forecast = last hour's PV (June 2026 SMARD).
+MAE ≈ 3249.7629 MWh.
+See python/persistence_pv.py and data/persistence_june.csv.
+Not a model. This is the baseline any later forecast must beat.
