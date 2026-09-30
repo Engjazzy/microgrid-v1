@@ -169,3 +169,9 @@ Next-hour PV forecast = last hour's PV (June 2026 SMARD).
 MAE ≈ 3249.7629 MWh.
 See python/persistence_pv.py and data/persistence_june.csv.
 Not a model. This is the baseline any later forecast must beat.
+
+
+
+python/plot_persistence shsows the Actual PV vs persistence curves
+![Actual PV vs Persistence](figures/Python%20plots/17_persistence.png)
+persistence misses the morning rise and evening drop.
