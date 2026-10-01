@@ -172,6 +172,11 @@ Not a model. This is the baseline any later forecast must beat.
 
 
 
-python/plot_persistence shsows the Actual PV vs persistence curves
+python/plot_persistence shows the Actual PV vs persistence curves
 ![Actual PV vs Persistence](figures/Python%20plots/17_persistence.png)
 persistence misses the morning rise and evening drop.
+
+SOn the 144 hours that have both guesses:
+persistence MAE ≈ 3129 MWh, same-hour-yesterday MAE ≈ 3574 MWh.
+Persistence wins on this June week (~445 MWh closer).
+![Errors](figures/Python%20plots/18_persistence_error_vs_yesterday_error.png)

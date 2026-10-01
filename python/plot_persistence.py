@@ -13,8 +13,9 @@ plt.xlabel("Time")
 plt.title("June 2026 PV: actual vs next-hour persistence")
 plt.grid(True, axis="y")
 plt.legend()
-plt.tight_layout()
 plt.xticks(rotation =45)
+plt.tight_layout()
+
 
 plt.savefig("figures/Python plots/17_persistence")
 print("You be agba coder")
