@@ -180,3 +180,6 @@ SOn the 144 hours that have both guesses:
 persistence MAE ≈ 3129 MWh, same-hour-yesterday MAE ≈ 3574 MWh.
 Persistence wins on this June week (~445 MWh closer).
 ![Persistence vs yesterday error](figures/Python%20plots/18_persistence_error_vs_yesterday_error.png)
+
+Persistence error by clock hour: worst around 08:00 (MAE ≈ 8361.731 MWh).
+Night hours are easy because PV stays near 0.
