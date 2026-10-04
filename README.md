@@ -179,4 +179,4 @@ persistence misses the morning rise and evening drop.
 SOn the 144 hours that have both guesses:
 persistence MAE ≈ 3129 MWh, same-hour-yesterday MAE ≈ 3574 MWh.
 Persistence wins on this June week (~445 MWh closer).
-![Errors](figures/Python%20plots/18_persistence_error_vs_yesterday_error.png)
+![Persistence vs yesterday error](figures/Python%20plots/18_persistence_error_vs_yesterday_error.png)
