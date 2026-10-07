@@ -176,10 +176,14 @@ python/plot_persistence shows the Actual PV vs persistence curves
 ![Actual PV vs Persistence](figures/Python%20plots/17_persistence.png)
 persistence misses the morning rise and evening drop.
 
-SOn the 144 hours that have both guesses:
+On the 144 hours that have both guesses:
 persistence MAE ≈ 3129 MWh, same-hour-yesterday MAE ≈ 3574 MWh.
 Persistence wins on this June week (~445 MWh closer).
 ![Persistence vs yesterday error](figures/Python%20plots/18_persistence_error_vs_yesterday_error.png)
 
 Persistence error by clock hour: worst around 08:00 (MAE ≈ 8361.731 MWh).
 Night hours are easy because PV stays near 0.
+
+Persistence error by clock hour: worst around 08:00 (MAE ≈ 8362 MWh).
+Night hours are easy because PV stays near 0.
+![Error by hour](figures/Python%20plots/19_error_by_hour.png)
