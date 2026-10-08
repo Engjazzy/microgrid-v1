@@ -187,3 +187,11 @@ Night hours are easy because PV stays near 0.
 Persistence error by clock hour: worst around 08:00 (MAE ≈ 8362 MWh).
 Night hours are easy because PV stays near 0.
 ![Error by hour](figures/Python%20plots/19_error_by_hour.png)
+
+## Grid door
+pandapower 2-bus, 20 kV. Slack bus held at 1.0 pu.
+1 km NAYY 4x150 SE cable, load 0.5 MW + 0.1 Mvar.
+Load-bus voltage = 0.999723 pu.
+Slack supplies 0.500134 MW (load plus cable loss).
+python/two_bus.py → data/two_bus_result.csv
+Not a German grid. First load flow.
