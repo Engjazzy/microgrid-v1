@@ -195,3 +195,13 @@ Load-bus voltage = 0.999723 pu.
 Slack supplies 0.500134 MW (load plus cable loss).
 python/two_bus.py → data/two_bus_result.csv
 Not a German grid. First load flow.
+
+Same feeder, load raised. q stays 0.1 Mvar.
+| P (MW) | load-bus vm_pu |
+| --- | --- |
+| 0.5 | 0.999723 |
+| 1.0 | 0.999463 |
+| 2.0 | 0.998942 |
+More load, lower voltage. Cable unchanged.
+python/load_sweep.py → data/load_sweep.csv
+
