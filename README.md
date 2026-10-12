@@ -208,3 +208,5 @@ python/load_sweep.py → data/load_sweep.csv
 Same 2 MW load, cable cut from 1 km to 0.2 km.
 1 km → 0.998942 pu. 0.2 km → 0.999788 pu.
 Shorter cable, smaller drop.
+
+![Load sweep](figures/Python%20plots/20_load_sweep.png)
