@@ -210,3 +210,18 @@ Same 2 MW load, cable cut from 1 km to 0.2 km.
 Shorter cable, smaller drop.
 
 ![Load sweep](figures/Python%20plots/20_load_sweep.png)
+
+
+Same feeder, 0.5 MW load plus PV.
+Load only: 0.999723 pu. With 1 MW PV: 1.000243 pu.
+Export raises voltage at the customer end.
+
+| PV (MW) | load-bus vm_pu |
+| --- | --- |
+| 0.0 | 0.999723 |
+| 0.5 | 0.999983 |
+| 1.0 | 1.000243 |
+| 1.5 | 1.000503 |
+| 2.0 | 1.000763 |
+More PV, higher voltage. Load and cable unchanged.
+python/pv_bus.py, python/pv_sweep.py → data/pv_sweep.csv
