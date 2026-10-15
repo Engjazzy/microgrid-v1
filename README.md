@@ -223,5 +223,9 @@ Export raises voltage at the customer end.
 | 1.0 | 1.000243 |
 | 1.5 | 1.000503 |
 | 2.0 | 1.000763 |
+
+
 More PV, higher voltage. Load and cable unchanged.
 python/pv_bus.py, python/pv_sweep.py → data/pv_sweep.csv
+
+![PV sweep](figures/Python%20plots/21_pv_sweep.png)
