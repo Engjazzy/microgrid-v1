@@ -229,3 +229,6 @@ More PV, higher voltage. Load and cable unchanged.
 python/pv_bus.py, python/pv_sweep.py → data/pv_sweep.csv
 
 ![PV sweep](figures/Python%20plots/21_pv_sweep.png)
+
+![Load vs PV](figures/Python%20plots/22_load_vs_pv.png)
+Same feeder. Load lowers the far-end voltage. PV raises it.
