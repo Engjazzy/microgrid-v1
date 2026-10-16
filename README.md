@@ -232,3 +232,18 @@ python/pv_bus.py, python/pv_sweep.py → data/pv_sweep.csv
 
 ![Load vs PV](figures/Python%20plots/22_load_vs_pv.png)
 Same feeder. Load lowers the far-end voltage. PV raises it.
+
+## 5 km cable
+
+Same 0.5 MW load, same PV sizes, cable now 5 km.
+
+| PV (MW) | load-bus vm_pu |
+|---|---|
+| 0.0 | 0.998680 |
+| 0.5 | 0.999982 |
+| 1.0 | 1.001280 |
+| 1.5 | 1.002575 |
+| 2.0 | 1.003866 |
+
+Longer cable → larger voltage rise.  
+![5 km PV sweep](figures/Python%20plots/23_pv_sweep_5km.png)
