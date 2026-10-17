@@ -247,3 +247,8 @@ Same 0.5 MW load, same PV sizes, cable now 5 km.
 
 Longer cable → larger voltage rise.  
 ![5 km PV sweep](figures/Python%20plots/23_pv_sweep_5km.png)
+
+## Three-bus feeder
+Two 2.5 km sections. Middle bus has 0.3 MW load. Far bus has 0.5 MW load + 1 MW PV.  
+![three-bus](figures/Python%20plots/24_three_bus.png)  
+Far-end voltage is higher than the middle bus because the PV is at the end.
