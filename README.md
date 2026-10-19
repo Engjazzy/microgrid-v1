@@ -252,3 +252,8 @@ Longer cable → larger voltage rise.
 Two 2.5 km sections. Middle bus has 0.3 MW load. Far bus has 0.5 MW load + 1 MW PV.  
 ![three-bus](figures/Python%20plots/24_three_bus.png)  
 Far-end voltage is higher than the middle bus because the PV is at the end.
+
+## Zero-load check (5 km)
+1 MW PV, 0 MW load at the far bus.
+Voltage at bus 1 = 1.002675 pu (higher than the 0.5 MW load case).
+All 1 MW flows back to the substation, so the voltage rise is larger.
