@@ -253,6 +253,17 @@ Two 2.5 km sections. Middle bus has 0.3 MW load. Far bus has 0.5 MW load + 1 MW 
 ![three-bus](figures/Python%20plots/24_three_bus.png)  
 Far-end voltage is higher than the middle bus because the PV is at the end.
 
+## Three-bus feeder
+Two 2.5 km sections. Middle bus has 0.3 MW load. Far bus has 0.5 MW load + 1 MW PV.
+
+| Bus | Voltage (pu) |
+|---|---|
+| 0 (slack) | 1.000 |
+| 1 (middle) | 1.000246 |
+| 2 (far end) | 1.000866 |
+
+Far-end voltage is higher than the middle bus because the PV is at the end.
+
 ## Zero-load check (5 km)
 1 MW PV, 0 MW load at the far bus.
 Voltage at bus 1 = 1.002675 pu (higher than the 0.5 MW load case).
