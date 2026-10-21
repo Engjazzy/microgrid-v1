@@ -268,3 +268,5 @@ Far-end voltage is higher than the middle bus because the PV is at the end.
 1 MW PV, 0 MW load at the far bus.
 Voltage at bus 1 = 1.002675 pu (higher than the 0.5 MW load case).
 All 1 MW flows back to the substation, so the voltage rise is larger.
+
+![Three-bus voltages](figures/Python%20plots/24_three_bus.png)
