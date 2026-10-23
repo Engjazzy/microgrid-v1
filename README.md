@@ -276,3 +276,6 @@ Far bus has only the 0.5 MW load and no PV(sgen)
 Middle voltage: 0.998945 pu  
 Far-end voltage: 0.998264 pu  
 Without PV both voltages fall below 1.0. The drop is larger at the far end.
+
+## Compare three-buses, PV and no PV cases
+TThe far-end bus has the largest voltage difference between the two cases. With PV the reverse power raises its voltage; without PV the load current lowers it. The slack bus stays at 1.0 pu in both runs because its voltage is fixed.
