@@ -270,3 +270,9 @@ Voltage at bus 1 = 1.002675 pu (higher than the 0.5 MW load case).
 All 1 MW flows back to the substation, so the voltage rise is larger.
 
 ![Three-bus voltages](figures/Python%20plots/24_three_bus.png)
+
+## Three-bus, no PV
+Far bus has only the 0.5 MW load and no PV(sgen)
+Middle voltage: 0.998945 pu  
+Far-end voltage: 0.998264 pu  
+Without PV both voltages fall below 1.0. The drop is larger at the far end.
