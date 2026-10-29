@@ -279,3 +279,7 @@ Without PV both voltages fall below 1.0. The drop is larger at the far end.
 
 ## Compare three-buses, PV and no PV cases
 TThe far-end bus has the largest voltage difference between the two cases. With PV the reverse power raises its voltage; without PV the load current lowers it. The slack bus stays at 1.0 pu in both runs because its voltage is fixed.
+
+
+![Three-bus with vs without PV](figures/Python%20plots/25_three_bus_compare.png)
+
