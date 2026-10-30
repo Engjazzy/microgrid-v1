@@ -283,3 +283,12 @@ TThe far-end bus has the largest voltage difference between the two cases. With 
 
 ![Three-bus with vs without PV](figures/Python%20plots/25_three_bus_compare.png)
 
+## PV at middle bus
+1 MW PV moved to the middle bus. Loads unchanged.
+
+| Bus | Voltage (pu) |
+|---|---|
+| 1 (middle) | 1.000246 |
+| 2 (far end) | 0.999566 |
+
+The voltage rise is now larger at the middle bus than at the far end.
