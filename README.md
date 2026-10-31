@@ -292,3 +292,6 @@ TThe far-end bus has the largest voltage difference between the two cases. With 
 | 2 (far end) | 0.999566 |
 
 The voltage rise is now larger at the middle bus than at the far end.
+
+![PV at middle bus](figures/Python%20plots/26_three_bus_pv_middle.png)
+
