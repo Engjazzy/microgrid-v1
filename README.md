@@ -295,3 +295,16 @@ The voltage rise is now larger at the middle bus than at the far end.
 
 ![PV at middle bus](figures/Python%20plots/26_three_bus_pv_middle.png)
 
+## Assumption & sensitivity note 
+
+Fixed: 20 kV, two 2.5 km NAYY sections, loads 0.3 MW (middle) and 0.5 MW (far), slack at 1.0 pu.
+Changed: PV location (far end / none / middle) and presence.
+Reversal: moving the 1 MW PV from the far end to the middle bus reverses which bus has the highest voltage.
+
+## Technical note 
+
+On this 5 km three-bus feeder the location of the 1 MW PV decides where the voltage rise appears. With the PV at the far end the far-end voltage reaches 1.000866 pu while the middle bus stays near 1.000246 pu. With no PV both buses fall below 1.0 pu and the drop is larger at the far end. Moving the same PV to the middle bus shifts the rise to the middle bus (1.000246 pu) and leaves the far end below 1.0 pu. For planning, the critical case is therefore PV injection at the end of the longest section.
+
+## Limit & data-quality flag
+
+All voltages remain well inside the ±5 % band commonly applied to MV feeders. The model uses ideal cable data and fixed loads; real feeders have varying demand and additional impedance from joints and transformers.
