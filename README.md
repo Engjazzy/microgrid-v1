@@ -264,26 +264,26 @@ Two 2.5 km sections. Middle bus has 0.3 MW load. Far bus has 0.5 MW load + 1 MW 
 
 Far-end voltage is higher than the middle bus because the PV is at the end.
 
-## Zero-load check (5 km)
+### Zero-load check (5 km)
 1 MW PV, 0 MW load at the far bus.
 Voltage at bus 1 = 1.002675 pu (higher than the 0.5 MW load case).
 All 1 MW flows back to the substation, so the voltage rise is larger.
 
 ![Three-bus voltages](figures/Python%20plots/24_three_bus.png)
 
-## Three-bus, no PV
+### Three-bus, no PV
 Far bus has only the 0.5 MW load and no PV(sgen)
 Middle voltage: 0.998945 pu  
 Far-end voltage: 0.998264 pu  
 Without PV both voltages fall below 1.0. The drop is larger at the far end.
 
-## Compare three-buses, PV and no PV cases
+### Compare three-buses, PV and no PV cases
 TThe far-end bus has the largest voltage difference between the two cases. With PV the reverse power raises its voltage; without PV the load current lowers it. The slack bus stays at 1.0 pu in both runs because its voltage is fixed.
 
 
 ![Three-bus with vs without PV](figures/Python%20plots/25_three_bus_compare.png)
 
-## PV at middle bus
+### PV at middle bus
 1 MW PV moved to the middle bus. Loads unchanged.
 
 | Bus | Voltage (pu) |
@@ -295,16 +295,28 @@ The voltage rise is now larger at the middle bus than at the far end.
 
 ![PV at middle bus](figures/Python%20plots/26_three_bus_pv_middle.png)
 
-## Assumption & sensitivity note 
+#### Assumption & sensitivity note 
 
 Fixed: 20 kV, two 2.5 km NAYY sections, loads 0.3 MW (middle) and 0.5 MW (far), slack at 1.0 pu.
 Changed: PV location (far end / none / middle) and presence.
 Reversal: moving the 1 MW PV from the far end to the middle bus reverses which bus has the highest voltage.
 
-## Technical note 
+#### Technical note 
 
 On this 5 km three-bus feeder the location of the 1 MW PV decides where the voltage rise appears. With the PV at the far end the far-end voltage reaches 1.000866 pu while the middle bus stays near 1.000246 pu. With no PV both buses fall below 1.0 pu and the drop is larger at the far end. Moving the same PV to the middle bus shifts the rise to the middle bus (1.000246 pu) and leaves the far end below 1.0 pu. For planning, the critical case is therefore PV injection at the end of the longest section.
 
-## Limit & data-quality flag
+#### Limit & data-quality flag
 
 All voltages remain well inside the ±5 % band commonly applied to MV feeders. The model uses ideal cable data and fixed loads; real feeders have varying demand and additional impedance from joints and transformers.
+
+Longer first section (4 km + 2.5 km)
+#### Assumption & sensitivity note
+Fixed: 20 kV, loads 0.3 MW (middle) and 0.5 MW (far), 1 MW PV at far end, slack at 1.0 pu.
+Changed: first cable section lengthened from 2.5 km to 4.0 km.
+Reversal: shortening the first section back to 2.5 km lowers the far-end voltage.
+
+#### Technical note
+Lengthening the first section to 4 km increases the path the reverse power must travel. Far-end voltage rises to 1.001033 pu and middle voltage to 1.000413 pu. Both are higher than in the equal 2.5 km case because more cable resistance lies between the injection and the slack.
+
+#### Limit & data-quality flag
+The voltages remain inside the ±5 % MV planning band. The model still uses ideal cable data and constant loads.
