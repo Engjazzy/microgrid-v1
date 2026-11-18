@@ -320,3 +320,5 @@ Lengthening the first section to 4 km increases the path the reverse power must 
 
 #### Limit & data-quality flag
 The voltages remain inside the ±5 % MV planning band. The model still uses ideal cable data and constant loads.
+
+![Longer middle section](figures/Python%20plots/27_three_bus_long_middle.png)
