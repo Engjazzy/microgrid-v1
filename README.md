@@ -322,3 +322,18 @@ Lengthening the first section to 4 km increases the path the reverse power must 
 The voltages remain inside the ±5 % MV planning band. The model still uses ideal cable data and constant loads.
 
 ![Longer middle section](figures/Python%20plots/27_three_bus_long_middle.png)
+
+#### Assumption & sensitivity note
+
+Fixed: 20 kV, 2.5 km + 2.5 km, loads 0.3 / 0.5 MW, 1 MW PV at far end.
+Changed: cable type from NAYY 4x150 SE to NAYY 4x50 SE.
+Reversal: returning to the thicker cable lowers the far-end voltage.
+
+#### Technical note
+
+The thinner cable has higher resistance. Far-end voltage rises to 1.002737 pu. The rise is larger than with the original 150 mm² cable because the same reverse power produces a bigger voltage drop along the feeder.
+
+
+
+#### Limit & data-quality flag
+The far-end voltage of 1.002737 pu is still inside the ±5 % MV planning band. The model still uses ideal cable data and constant loads.
