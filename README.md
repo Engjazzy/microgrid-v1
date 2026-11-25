@@ -337,3 +337,5 @@ The thinner cable has higher resistance. Far-end voltage rises to 1.002737 pu. T
 
 #### Limit & data-quality flag
 The far-end voltage of 1.002737 pu is still inside the ±5 % MV planning band. The model still uses ideal cable data and constant loads.
+
+![Thinner cable](figures/Python%20plots/28_three_bus_thin.png)
